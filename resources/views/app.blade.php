@@ -3,13 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/all.css">
 </head>
 <body>
 
 	<div class="container">
+		@include('flash::message')
+
 		@yield('content')
 	</div>
+
+	<script src="/js/all.js"></script>
+
+	<script>
+		$('#flash-overlay-modal').modal();
+	</script>
 
 	@yield('footer')
 
