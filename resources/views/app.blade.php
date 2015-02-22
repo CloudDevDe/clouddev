@@ -7,19 +7,21 @@
 </head>
 <body>
 
-	<div class="container">
-		@include('flash::message')
+	@include('partials.nav')
 
-		@yield('content')
-	</div>
+		<div class="container">
+			@include('flash::message')
 
-	<script src="/js/all.js"></script>
+			@yield('content')
+		</div>
 
-	<script>
-		$('#flash-overlay-modal').modal();
-	</script>
+		<script src="/js/all.js"></script>
 
-	@yield('footer')
+		<script>
+			$('#flash-overlay-modal').modal();
+		</script>
+
+		@yield('footer')
 
 </body>
 </html>
